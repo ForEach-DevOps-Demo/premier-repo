@@ -5,12 +5,14 @@ jobs:
     name: Build teste et run mon application
     runs-on: ubuntu-latest
     steps:
+      - name: récupérer le code
+        uses: actions/checkout@v4
       - name: installation des node_modules
         run: npm ci
-      - name: build
-        run: npm run build
       - name: test
         run: npm run test
+      - name: build
+        run: npm run build
       - name: start
         run: npm run start
     
