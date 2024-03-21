@@ -21,6 +21,8 @@ jobs:
         run: npm run build
       - name: start
         run: npm run start
+      - name: sommaire
+        run: echo "# Résumé du step" >> $GITHUB_STEP_SUMMARY
     
 
   
