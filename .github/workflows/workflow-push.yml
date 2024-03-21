@@ -22,7 +22,11 @@ jobs:
       - name: start
         run: npm run start
       - name: sommaire
-        run: echo "# Résumé du step" >> $GITHUB_STEP_SUMMARY
+        run: |
+          echo "# Résumé du step" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "On peut ajouter du markdown dans le fichier d'environnement GITHUB_STEP_SUMMARY. Il s'affichera sur la page de résumé d'une exécution de workflow." >> $GITHUB_STEP_SUMMARY
+          echo "On pourrait par exemple y afficher les résultats de nos tests." >> $GITHUB_STEP_SUMMARY
     
 
   
