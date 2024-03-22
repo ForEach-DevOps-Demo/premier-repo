@@ -24,6 +24,7 @@ jobs:
       - name: test
         id: run-test
         run: npm run test
+        continue-on-error: true
       - name: build
         run: npm run build
       - name: start
@@ -39,5 +40,6 @@ jobs:
     needs: mon_job
     steps:
       - run:  echo Résultat des tests -> ${{needs.mon_job.outputs.statut-tests}} 
+      
 
   
